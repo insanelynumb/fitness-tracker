@@ -1,0 +1,156 @@
+/* Styling for alert messages */
+.alert {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: #FF5733;
+    color: #fff;
+}
+
+/* Styling for the header and text */
+.header {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-muted {
+    font-size: 18px;
+    color: #888;
+}
+
+/* Styling for the HR line */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the "No data" message */
+.centered-div {
+    text-align: center;
+    margin: 30px;
+    font-style: italic;
+    color: #999;
+}
+
+/* Styling for date headings */
+.date h4 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Styling for tables */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-weight: bold;
+    color: #444;
+}
+
+.table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Styling for the delete button */
+.fa-trash {
+    color: #FF5733;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styling for the "Total Calories" row */
+tfoot th {
+    text-align: right;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Styling for the "Add" buttons */
+.add {
+    text-align: right;
+}
+
+/* Styling for cards */
+.card {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #ccc;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card-text {
+    margin-top: 15px;
+}
+
+/* Styling for form elements */
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for buttons */
+.btn {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.trash-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.elegant-trash-icon {
+  color: red; /* Custom color, you can change this */
+  font-size: 18px; /* Custom size, you can change this */
+  text-decoration: none;
+  transition: color 0.2s; /* Add a smooth color transition on hover */
+}
+
+.elegant-trash-icon:hover {
+  color: #FF5733; /* Change color on hover, you can customize this */
+}

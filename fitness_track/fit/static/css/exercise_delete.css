@@ -1,0 +1,64 @@
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Style the container */
+.content-section {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the legend */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Style the exercise details */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the "Delete This Exercise" button */
+.btn-outline-danger {
+    background-color: #ff5722;
+    color: #fff;
+    border: 2px solid #ff5722;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff4500;
+    border-color: #ff4500;
+}
+
+/* Style the "No, Cancel" button */
+.btn-outline-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #bbb;
+    border-color: #bbb;
+}

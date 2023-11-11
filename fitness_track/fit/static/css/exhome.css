@@ -1,0 +1,205 @@
+/* Style the body */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the container with scrolling */
+div {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 20px; /* Add some padding to the container */
+}
+
+/* Style the card */
+/* Reduce the size of the card */
+/* Make the card even smaller */
+/* Make the card even smaller */
+.card {
+    margin-bottom: 3px; /* Reduce the margin further */
+    border: none;
+    border-radius: 3px; /* Keep a small border radius */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Keep a subtle shadow */
+}
+
+/* Reduce the padding for the card body */
+.card-body {
+    padding: 3px; /* Decrease the padding to make the card body smaller */
+}
+
+/* Reduce the font size for the card title */
+.card-title {
+    font-size: 20px; /* Decrease the font size further for the card title */
+    color: #333;
+}
+
+
+
+
+/* Style the table */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+/* Style the table header */
+.table th {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style the table rows */
+.table td {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style the "Details" button */
+.btn-custom {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px; /* Make the button smaller */
+    font-size: 14px; /* Make the text smaller */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #45A844;
+}
+
+/* Style the content section card */
+.content-section {
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Style the buttons in the content section */
+.content-section .btn {
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Customize button colors based on URL pattern name */
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.btn-outline-primary {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+.btn-success {
+    background-color: #28A745;
+    color: #fff;
+}
+
+.btn-outline-success {
+    background-color: #fff;
+    border: 2px solid #28A745;
+    color: #28A745;
+}
+
+/* Style the icons inside buttons */
+.fa {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Style the buttons that were not affected previously */
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline-primary {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007BFF;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+.btn-outline-success {
+    background-color: #fff;
+    border: 2px solid #28A745;
+    color: #28A745;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover {
+    background-color: #28A745;
+    border-color: #1e7e34;
+    color: #fff;
+}
+
+/* Style the "Build Workout" button */
+.btn-outline-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #bbb;
+}

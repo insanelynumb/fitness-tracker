@@ -1,0 +1,65 @@
+/* Custom CSS for the Exercise Log Form */
+
+.content-section {
+  background-color: #f8f9fa; /* Background color for the content section */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff; /* Heading color */
+  border-bottom: 2px solid #007bff; /* Heading underline */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.btn.btn-outline-info {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn.btn-outline-info:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  legend {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

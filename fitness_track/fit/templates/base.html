@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+</head>
+<body>
+<nav>
+    <a href="{% url 'fit:home' %}"><i class="fas fa-home"></i> Home</a>
+    <a href="{% url 'fit:wtlog' %}"><i class="fas fa-weight"></i> Weight Log</a>
+    <a href="{% url 'fit:foodrecord' %}"><i class="fas fa-utensils"></i> Diet</a>
+    <a href="{% url 'fit:exercises' %}"><i class="fas fa-dumbbell"></i> Exercises</a>
+    <a href="{% url 'fit:exlog_home' %}"><i class="fas fa-calendar-alt"></i> Exercise Log</a>
+    <a href="{% url 'fit:results' %}"><i class="fas fa-chart-line"></i> Results</a>
+    <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <div class="animation start-home"></div>
+</nav>
+
+
+
+
+
+
+{% block body_block %}
+    <!-- This block will be replaced by child templates -->
+    {% endblock %}
+
+</body>
+</html>

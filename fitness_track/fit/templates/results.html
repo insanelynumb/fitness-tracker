@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div class="row">
+    <div class="col-12 text-center">
+        <h1>Results</h1>
+        <p class="text-muted">View your progress over time.</p>
+    </div>
+</div>
+
+    <hr>
+<div class="row">
+    <div class="col-12">
+        <div class="home-button">
+            <a href="{% url 'fit:home' %}" class="btn btn-outline-secondary">
+                <i class="fas fa-home home-icon"></i> Home
+            </a>
+        </div>
+        <!-- Rest of your content -->
+    </div>
+</div>
+<br>
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">
+                        {{ change }} <span class="small">lbs</span>
+                    </h1>
+                    <p class="card-text">
+                        <i class="fa fa-line-chart"></i> Weight Change
+                        <br>
+                        <span>&shy;</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+ <!-- Add this button at the top right corner of the page with Bootstrap styling -->
+
+
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">
+                        {{ str_change }} <span class="small">%</span>
+                    </h1>
+                    <p class="card-text">
+                        <i class="fa fa-bolt"></i>  Strength Change {% if not request.GET.ex %} <br><span class="small text-danger">No Exercise Selected</span> {% else %} <br><span>&shy;</span>{% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">
+                       {{ avg_cals }} <span class="small">cals</span>
+                    </h1>
+                    <p class="card-text">
+                        <i class="fa fa-cutlery"></i>  Avg Daily Consumption
+                        <br>
+                        <span>&shy;</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">
+                        {{ average }} <span class="small">lbs</span>
+                    </h1>
+                    <p class="card-text">
+                        <i class="fa fa-balance-scale"></i>  Average Weight
+                        <br>
+                        <span>&shy;</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/fit/results/" class="form-inline" style="float:right">
+                        <select name="ex" id="ex" class="form-control">
+                            <option selected disabled>Select Exercise</option>
+                            {% for name in ex_names %}
+                                <option value="{{ name }}" {% if name == request.GET.ex %} selected {% endif %}>{{ name }}</option>
+                            {% endfor %}
+                        </select>
+                        <Button class="btn btn-outline-secondary form-control" type="submit">Submit</Button>
+                    </form>
+                    <h4 class="card-title">
+                        Strength Increase ({{ request.GET.ex }})
+                    </h4>
+                    <p class="card-text">
+                        <img style="padding-top:2%"src="data:image/png;base64,{{ img3 }}" width="100%">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Daily Calorie Consumption
+                    </h4>
+                    <p class="card-text">
+                        <img src="data:image/png;base64,{{ img2 }}" width="100%">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+                <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Weight History
+                    </h4>
+                    <p class="card-text">
+                        <img src="data:image/png;base64,{{ img1 }}" width="100%">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

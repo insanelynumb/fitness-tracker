@@ -1,0 +1,58 @@
+/* Style the card containing the buttons */
+.card.content-section {
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Style the buttons inside the card */
+.card.content-section .btn {
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+/* Style the "View All Workouts" button */
+.card.content-section .btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.card.content-section .btn-outline-primary {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+/* Style the "Add New Workout" button */
+.card.content-section .btn-success {
+    background-color: #28A745;
+    color: #fff;
+}
+
+.card.content-section .btn-outline-success {
+    background-color: #fff;
+    border: 2px solid #28A745;
+    color: #28A745;
+}
+
+/* Style the "Build Workout" button */
+.card.content-section .btn-outline-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+/* Style the "Your New Button" button */
+.card.content-section .btn-your-custom-class {
+    background-color: #your-color; /* Set your background color */
+    color: #your-text-color; /* Set your text color */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+

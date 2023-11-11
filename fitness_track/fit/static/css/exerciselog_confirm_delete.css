@@ -1,0 +1,68 @@
+/* Add this CSS to your project's stylesheet */
+
+/* Style the body */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the content section */
+.content-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style the fieldset */
+fieldset {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style the legend */
+legend {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+/* Style the heading */
+h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Style the buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-outline-danger {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+}
+
+.btn-outline-danger:hover {
+    background-color: #FF4121;
+}
+
+.btn-outline-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #bbb;
+}

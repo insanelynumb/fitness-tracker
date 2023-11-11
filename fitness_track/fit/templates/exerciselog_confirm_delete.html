@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/exerciselog_confirm_delete.css' %}">
+</head>
+<body>
+<div class="content-section">
+
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Delete Exercise Log?</legend>
+            <h3>Are you sure you want to delete "{{ object.date|date:"F d, Y"}} Workout" (and its Exercises) from the database?</h3>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Yes, Delete The Workout</button>
+            <a class="btn btn-outline-secondary" href="{% url 'fit:exlog-detail' object.id %}">No, Cancel</a>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

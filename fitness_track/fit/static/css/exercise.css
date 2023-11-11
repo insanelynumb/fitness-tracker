@@ -1,0 +1,159 @@
+/* Add this style for the button */
+.button-add-workout {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    float: right; /* Float the button to the right */
+    line-height: 1.2; /* Adjust line height for better text alignment */
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+.button-add-workout:hover {
+    background-color: #218838; /* Darker green on hover */
+    color: white;
+}
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container for the entire content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+}
+
+/* Boxes container */
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Selection box */
+.selection-box {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Exercises container */
+.exercises-container {
+    flex: 3;
+    padding: 20px;
+}
+
+/* Exercise card styles */
+.exercise {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.exercise-image {
+    flex: 1;
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.exercise-text {
+    flex: 3;
+}
+
+/* Buttons */
+.button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #1d6fa5;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .boxes {
+        flex-direction: column;
+    }
+
+    .selection-box, .exercises-container {
+        flex: 1;
+        width: 100%;
+    }
+}
+.home-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+/* Add this CSS to your stylesheet for additional styling */
+
+/* Adjust the size of the buttons as needed */
+.square-btn {
+    width: 150px; /* You can change the width */
+    height: 150px; /* To make them square, set the height equal to the width */
+}
+
+/* Add margin between the buttons */
+.horizontal-container button {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Customize the button appearance */
+.square-btn {
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove the button border */
+}
+
+/* Change button background color on hover */
+.square-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Add additional styling as per your requirements */
+

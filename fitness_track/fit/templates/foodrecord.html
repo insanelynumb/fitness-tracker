@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/foodrecord.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} fade" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <h1 class="header pb-0 mb-0">Food Tracker</h1>
+        <hr>
+
+        <div class="row pt-3">
+
+            <div class="col-7">
+                <div class="card" style="max-height:1000px;overflow-y:auto;">
+                    <div class="card-body">
+                        {% if not data %}
+                            <div class="centered-div">
+                                <i><b>No data to view.  Try adding an entry!</b></i>
+                            </div>
+                        {% endif %}
+
+                        {% for date, foods in data.items %}
+                            <div class="date">
+                                {% if date == today_date %}
+                                    <h4>Today</h4>
+                                {% elif date == yesterday_date %}
+                                    <h4>Yesterday</h4>
+                                {% else %}
+                                    <h4> {{ date }}</h4>
+                                {% endif %}
+                            </div>
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                    <th style="text-align: center" scope="col">Description</th>
+                                    <th style="text-align: center" scope="col">Calories</th>
+                                    <th></th>
+                                </thead>
+                                <tbody>
+                                    {% for f in foods %}
+                                        <tr>
+                                            <td width="75%"style="text-align: center">{{ f.description }}</td>
+                                            <td style="text-align: center">{{ f.calories }}</td>
+                                            <td>
+                                                <form action="" method="post">
+                                                    {% csrf_token %}
+                                                    <input type ="hidden" value="{{ f.pk }}" name="pk">
+                                                    <button type="submit" style="border:none;background-color:transparent;" value="Delete" class="p-0 m-0 text-danger pl-3 pr-1"><i class="fas fa-trash elegant-trash-icon"></i></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                {% for d, cal in total_calories.items %}
+                                    {% if d == date %}
+                                        <tfoot>
+                                            <th style="text-align: center" scope="col"> Total Calories </th>
+                                            <th style="text-align: center" scope="col">{{ cal }}</th>
+                                            <th></th>
+                                        </tfoot>
+                                    {% endif %}
+                                {% endfor %}
+                            </table>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Add a New Food</h4>
+                        <div class="card-text">
+                            <form class="form-inline" action="" method="post">
+                                {% csrf_token %}
+                                <div class="col">
+                                    <div class="row">
+                                        <table>
+                                            {{ form }}
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="add">
+                                            <button type="submit" name="sub_btn_1" class="add btn btn-block btn-primary mb-2">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h4 class="card-title">Add an Existing Food</h4>
+                        <div class="card-text">
+                            <form class="form-inline" action="" method="post">
+                                {% csrf_token %}
+                                <div class="col">
+                                    <div class="row">
+                                        <table>
+                                            {{ form_2 }}
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="add">
+                                            <button type="submit" name="sub_btn_2" class="add btn btn-block btn-primary mb-2">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+{% endblock %}

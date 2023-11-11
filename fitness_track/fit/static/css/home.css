@@ -1,0 +1,68 @@
+/* Style the navigation bar */
+/* Style the navigation bar */
+/* Style the navigation bar */
+/* Style the navigation bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style the navigation links */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 20px; /* Increased the padding to spread the buttons */
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: auto;
+    transition: color 0.3s;
+}
+
+/* Style the Font Awesome icons */
+nav a i {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Styles for the animation */
+nav .animation {
+    display: none; /* Removed the animation */
+}
+
+
+h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+}
+
+p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: 'Cherry Swash', cursive;
+    font-size: 16px;
+}
+
+span {
+    color: #2BD6B4;
+}

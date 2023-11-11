@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/foodrecord.css' %}">
+</head>
+    <title>Weight Log</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                {% if savedWeight %}
+                    <div class="alert alert-success fade">Logged Weight. Great job!</div>
+                {% endif %}
+                <h1 class="mb-0">Weight Log</h1>
+                <p class="text-muted">Track your weight over time so that you can view your progress.</p>
+                <hr>
+                <br>
+                <form class="form-inline pb-3" action="" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="weight" class="form-control" placeholder="Enter your weight" required>
+                    <button type="submit" class="btn btn-primary btn-sm ml-2">Log</button>
+                </form>
+                <div class="card">
+                    <div class="card-body" id="weight-logs">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Weight</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if weight_logs|length < 1 %}
+                                    <tr>
+                                        <td class="text-center" colspan="2">What are you waiting for? Log your weight above!</td>
+                                    </tr>
+                                {% else %}
+                                    {% for weight in weight_logs %}
+                                        <tr>
+                                            <th scope="row">{{weight.timestamp}}</th>
+                                            <td>{{weight.weight}} lbs</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}
